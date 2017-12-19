@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-theme.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script href="/javascripts/jquery-1.12.4.min.js"></script>
+    <style>
+        .list-group{
+            margin-left: 70px;
+            padding-right: 700px;
+        }
+
+        .body {
+            text-align: center;
+            background: #fcfcfa;
+            color: #818078;
+            font-family: Futura, sans-serif;
+        }
+
+        .container {
+            max-width: 50%;
+            margin: 40px auto;
+        }
+
+        .hr-text {
+            line-height: 1em;
+            position: relative;
+            outline: 0;
+            border: 0;
+            color: black;
+            text-align: center;
+            height: 1.5em;
+            opacity: 0.5;
+        }
+        .hr-text:before {
+             content: '';
+             background: linear-gradient(to right, transparent, #818078, transparent);
+             position: absolute;
+             left: 0;
+             top: 50%;
+             width: 100%;
+             height: 2px;
+         }
+        .hr-text:after {
+             content: attr(data-content);
+             position: relative;
+             display: inline-block;
+             color: black;
+             padding: 0 .5em;
+             line-height: 1.5em;
+            color: #818078;
+             background-color: #fcfcfa;
+         }
+        .messagebox{
+            display: block;
+            font-size: 20px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+            /*부트스트랩 부분 끝*/
+
+
+            resize: none;
+            resize: both;
+            resize: horizontal;
+            resize: vertical;
+            resize: inherit;
+            margin:auto;
+            height: 200px;
+
+
+
+
+        }
+        .Tbutton {
+            border: 1px solid #1e3c4d;
+            background: #57bcff;
+            background: -webkit-gradient(linear, left top, left bottom, from(#69c6ff), to(#57bcff));
+            background: -webkit-linear-gradient(top, #69c6ff, #57bcff);
+            background: -moz-linear-gradient(top, #69c6ff, #57bcff);
+            background: -ms-linear-gradient(top, #69c6ff, #57bcff);
+            background: -o-linear-gradient(top, #69c6ff, #57bcff);
+            background-image: -ms-linear-gradient(top, #69c6ff 0%, #57bcff 100%);
+            padding: 8px 16px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+            -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+            box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+            text-shadow: #000000 0 1px 0;
+            color: #ffffff;
+            font-size: 24px;
+            font-family: helvetica, serif;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+        .Tbutton:hover {
+            border: 1px solid #0a3c59;
+            text-shadow: #f7fcff 0 1px 0;
+            background: #4fb9ff;
+            background: -webkit-gradient(linear, left top, left bottom, from(#94d4ff), to(#4fb9ff));
+            background: -webkit-linear-gradient(top, #94d4ff, #4fb9ff);
+            background: -moz-linear-gradient(top, #94d4ff, #4fb9ff);
+            background: -ms-linear-gradient(top, #94d4ff, #4fb9ff);
+            background: -o-linear-gradient(top, #94d4ff, #4fb9ff);
+            background-image: -ms-linear-gradient(top, #94d4ff 0%, #4fb9ff 100%);
+            color: #d1d1d1;
+        }
+        .Tbutton:active {
+            text-shadow: #1e4158 0 1px 0;
+            border: 1px solid #0a3c59;
+            background: #65a9d7;
+            background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#4fb9ff));
+            background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+            background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+            background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+            background: -o-linear-gradient(top, #3e779d, #65a9d7);
+            background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+            color: #fff;}
+
+            /*프린터 버튼*/
+        .Pbutton {
+            border: 1px solid #1e3c4d;
+            background: #fa52e1;
+            background: -webkit-gradient(linear, left top, left bottom, from(#ff6ef5), to(#fa52e1));
+            background: -webkit-linear-gradient(top, #ff6ef5, #fa52e1);
+            background: -moz-linear-gradient(top, #ff6ef5, #fa52e1);
+            background: -ms-linear-gradient(top, #ff6ef5, #fa52e1);
+            background: -o-linear-gradient(top, #ff6ef5, #fa52e1);
+            background-image: -ms-linear-gradient(top, #ff6ef5 0%, #fa52e1 100%);
+            padding: 8px 16px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+            -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+            box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+            text-shadow: #000000 0 1px 0;
+            color: #ffffff;
+            font-size: 24px;
+            font-family: helvetica, serif;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+        .Pbutton:hover {
+            border: 1px solid #0a3c59;
+            text-shadow: #f7fcff 0 1px 0;
+            background: #f021ff;
+            background: -webkit-gradient(linear, left top, left bottom, from(#fa96ff), to(#f021ff));
+            background: -webkit-linear-gradient(top, #fa96ff, #f021ff);
+            background: -moz-linear-gradient(top, #fa96ff, #f021ff);
+            background: -ms-linear-gradient(top, #fa96ff, #f021ff);
+            background: -o-linear-gradient(top, #fa96ff, #f021ff);
+            background-image: -ms-linear-gradient(top, #fa96ff 0%, #f021ff 100%);
+            color: #d1d1d1;
+        }
+        .Pbutton:active {
+            text-shadow: #1e4158 0 1px 0;
+            border: 1px solid #0a3c59;
+            background: #ff40f9;
+            background: -webkit-gradient(linear, left top, left bottom, from(#fa52fa), to(#f021ff));
+            background: -webkit-linear-gradient(top, #fa52fa, #ff40f9);
+            background: -moz-linear-gradient(top, #fa52fa, #ff40f9);
+            background: -ms-linear-gradient(top, #fa52fa, #ff40f9);
+            background: -o-linear-gradient(top, #fa52fa, #ff40f9);
+            background-image: -ms-linear-gradient(top, #fa52fa 0%, #ff40f9 100%);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+
+<p style="text-align: center;font-size: 100px;" >SMART SOCIAL PRINTER</p>
+
+<hr class="hr-text" data-content="친구 목록 ">
+
+
+
+<div class="row">
+    <div class="col-xs-5">
+        <select name="from" id="multiselect" class="form-control" size="8" multiple="multiple" style="margin-left: 25px">
+
+        </select>
+    </div>
+    <div class="col-xs-2">
+        <button type="button" id="multiselect_rightAll" class="btn btn-block"><i class="glyphicon glyphicon-forward"></i></button>
+        <button type="button" id="multiselect_rightSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-right"></i></button>
+        <button type="button" id="multiselect_leftSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-left"></i></button>
+        <button type="button" id="multiselect_leftAll" class="btn btn-block"><i class="glyphicon glyphicon-backward"></i></button>
+    </div>
+    <div class="col-xs-5">
+        <select name="to" id="multiselect_to" class="form-control" size="8" multiple="multiple" style="margin-left: -25px;">
+
+        </select>
+    </div>
+</div>
+<hr class="hr-text" data-content="메세지">
+<textarea class="messagebox" rows="12s" cols="80"></textarea>
+<div style="margin-left: 700px;margin-top: 10px;">
+    <input type="submit" value="Connect With Twitter" id="twitterSend" class="Tbutton" />
+    <input type="submit" value="Connect With Printer" id="printerSend" class="Pbutton" style="margin-left: 10px;" />
+</div>
+
+
+
+<!--</div>-->
+
+<script src="/javascripts/jquery-1.12.4.min.js"></script>
+<script src="/javascripts/bootstrap.js"></script>
+<script src="/javascripts/list.js"></script>
+<script src="/javascripts/multiselect.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('#multiselect').multiselect();
+    });
+</script>
+</body>
+</html>
